@@ -10,7 +10,6 @@ main {
     background-color: #6c7983;
 }
 .wrapper {
-    position: relative;
     width: 50%;
     height: auto;
     background-color: #25282a;
@@ -26,7 +25,7 @@ main {
     min-width: 100%;
 }
 .slide > img {
-    width: 100%;
+    width: 99%;
     height: auto;
     border-radius: 0.3em;
     object-fit: cover;
@@ -41,9 +40,7 @@ main {
     color: #fff;
 }
 .dots {
-    /* width: 100px; */
     display: flex;
-    /* justify-content: space-between; */
 }
 .dot-wrapper {
     display: inline-block;

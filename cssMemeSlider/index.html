@@ -27,7 +27,7 @@
           </div>
         </section>
         <section class="about-memes">
-          <p class="meme-descr">HTML is sooo easy.</p>
+          <p class="meme-descr">Hello, HTML! ...hello, world!</p>
           <div class="dots">
             <div class="dot-wrapper dot-wrpr-1">
               <div class="dot-shape active"></div>
@@ -59,6 +59,8 @@
       const dotWrapper4 = document.querySelector(".dot-wrpr-4");
       const dotWrapper5 = document.querySelector(".dot-wrpr-5");
 
+      const memeDescr = document.querySelector(".meme-descr");
+
       let index = 0;
       let width;
       function slideWith() {
@@ -77,6 +79,7 @@
         index = 1;
         slidesBox.style.transform = "translateX(" + -width * index + "px)";
         dotsLabel();
+        memeDescr.innerHTML = "Hi, CSS! It's me! How are you doing?";
       }
       dotWrapper3.addEventListener("click", trdDot);
       function trdDot() {
@@ -87,6 +90,7 @@
         index = 2;
         slidesBox.style.transform = "translateX(" + -width * index + "px)";
         dotsLabel();
+        memeDescr.innerHTML = "Nice to meet you, JS! I am so excited!";
       }
       dotWrapper4.addEventListener("click", frhDot);
       function frhDot() {
@@ -97,6 +101,7 @@
         index = 3;
         slidesBox.style.transform = "translateX(" + -width * index + "px)";
         dotsLabel();
+        memeDescr.innerHTML = "Hi, sweety! I'll break u your brains!";
       }
       dotWrapper5.addEventListener("click", ffhDot);
       function ffhDot() {
@@ -107,6 +112,7 @@
         index = 4;
         slidesBox.style.transform = "translateX(" + -width * index + "px)";
         dotsLabel();
+        memeDescr.innerHTML = "...to be continued";
       }
       //   ---
       dotWrapper1.addEventListener("click", fstDot);
@@ -118,6 +124,7 @@
         index = 0;
         slidesBox.style.transform = "translateX(" + -width * index + "px)";
         dotsLabel();
+        memeDescr.innerHTML = "Hello, HTML! ...hello, world!";
       }
       dotWrapper4.addEventListener("click", revFrhDot);
       function revFrhDot() {
@@ -128,6 +135,7 @@
         index = 3;
         slidesBox.style.transform = "translateX(" + -width * index + "px)";
         dotsLabel();
+        memeDescr.innerHTML = "Hi, sweety! I'll break u your brains!";
       }
       dotWrapper3.addEventListener("click", revTrdDot);
       function revTrdDot() {
@@ -138,6 +146,7 @@
         index = 2;
         slidesBox.style.transform = "translateX(" + -width * index + "px)";
         dotsLabel();
+        memeDescr.innerHTML = "Nice to meet you, JS! I am so excited!";
       }
       dotWrapper2.addEventListener("click", revSecDot);
       function revSecDot() {
@@ -148,6 +157,7 @@
         index = 1;
         slidesBox.style.transform = "translateX(" + -width * index + "px)";
         dotsLabel();
+        memeDescr.innerHTML = "Hi, CSS! It's me! How are you doing?";
       }
 
       function dotsLabel() {
