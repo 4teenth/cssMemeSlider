@@ -3,3 +3,90 @@
     padding: 0;
     box-sizing: border-box;
 }
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c7983;
+}
+.wrapper {
+    position: relative;
+    width: 50%;
+    height: auto;
+    background-color: #25282a;
+    border-radius: 5px;
+    border: 25px solid #25282a;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.3);
+    /* overflow: hidden; */
+}
+.slides-box {
+    display: flex;
+}
+.slide {
+    min-width: 100%;
+}
+.slide > img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.about-memes {
+    display: flex;
+    justify-content: space-between;
+}
+.meme-descr {
+    font-size: 16px;
+    color: #fff;
+}
+.dots {
+    /* width: 100px; */
+    display: flex;
+    /* justify-content: space-between; */
+}
+.dot-wrapper {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+}
+.dot-shape {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #71abfe;
+    border-radius: 50%;
+    transition: background-color 0.4s ease-in-out;
+}
+.dot-shape:hover {
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+}
+.active {
+    border: 2px solid #71abfe;
+    border-radius: 50%;
+    background-color: transparent;
+    /* transition: background-color 0.4s ease-in-out; */
+    transition: border-color 0.4s ease-in-out;
+}
+.active:hover {
+    border: 2px solid #fff;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+/* .dot:hover {
+    .dot-shape {
+        background-color: #fff;
+    }
+} */
+/* OR */
+.dot-wrapper:hover .dot-shape {
+    background-color: #fff;
+}
+.dot-wrapper:hover .active {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
