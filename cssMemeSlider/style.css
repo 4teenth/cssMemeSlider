@@ -47,8 +47,8 @@ main {
 }
 .dot-wrapper {
     display: inline-block;
-    width: 1.5em;
-    height: 1em;
+    width: 1.7em;
+    height: 1.4em;
     background-color: transparent;
     cursor: pointer;
     text-align: center;
