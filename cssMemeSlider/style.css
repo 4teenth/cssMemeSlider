@@ -14,10 +14,10 @@ main {
     width: 50%;
     height: auto;
     background-color: #25282a;
-    border-radius: 5px;
-    border: 25px solid #25282a;
-    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.3);
-    /* overflow: hidden; */
+    border-radius: 0.3em;
+    border: 1.5em solid #25282a;
+    box-shadow: 0 0 0.3em 0.3em rgba(0, 0, 0, 0.3);
+    overflow: hidden;
 }
 .slides-box {
     display: flex;
@@ -28,15 +28,16 @@ main {
 .slide > img {
     width: 100%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 0.3em;
     object-fit: cover;
 }
 .about-memes {
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0;
 }
 .meme-descr {
-    font-size: 16px;
+    font-size: 1em;
     color: #fff;
 }
 .dots {
@@ -46,16 +47,16 @@ main {
 }
 .dot-wrapper {
     display: inline-block;
-    width: 24px;
-    height: 16px;
+    width: 1.5em;
+    height: 1em;
     background-color: transparent;
     cursor: pointer;
     text-align: center;
 }
 .dot-shape {
     display: inline-block;
-    width: 12px;
-    height: 12px;
+    width: 0.8em;
+    height: 0.8em;
     background-color: #71abfe;
     border-radius: 50%;
     transition: background-color 0.4s ease-in-out;
@@ -66,14 +67,14 @@ main {
     transition: background-color 0.4s ease-in-out;
 }
 .active {
-    border: 2px solid #71abfe;
+    border: 0.1em solid #71abfe;
     border-radius: 50%;
     background-color: transparent;
     /* transition: background-color 0.4s ease-in-out; */
     transition: border-color 0.4s ease-in-out;
 }
 .active:hover {
-    border: 2px solid #fff;
+    border: 0.1em solid #fff;
     background-color: transparent;
     transition: border-color 0.4s ease-in-out;
 }
@@ -88,5 +89,25 @@ main {
 }
 .dot-wrapper:hover .active {
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 0.1em solid #fff;
+}
+@media (max-width: 1440px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+@media (max-width: 640px) {
+    .wrapper {
+        width: 90%;
+    }
+    .about-memes {
+        flex-direction: column;
+    }
+    .meme-descr {
+        order: 2;
+    }
+    .dots {
+        order: 1;
+        align-self: center;
+    }
 }
