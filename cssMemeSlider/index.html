@@ -9,6 +9,42 @@
   <body>
     <main>
       <div class="wrapper">
+        <input
+          type="radio"
+          name="radiobtn"
+          value="dot"
+          class="dot-btn"
+          id="dotBtn1"
+          checked
+        />
+        <input
+          type="radio"
+          name="radiobtn"
+          value="dot"
+          class="dot-btn"
+          id="dotBtn2"
+        />
+        <input
+          type="radio"
+          name="radiobtn"
+          value="dot"
+          class="dot-btn"
+          id="dotBtn3"
+        />
+        <input
+          type="radio"
+          name="radiobtn"
+          value="dot"
+          class="dot-btn"
+          id="dotBtn4"
+        />
+        <input
+          type="radio"
+          name="radiobtn"
+          value="dot"
+          class="dot-btn"
+          id="dotBtn5"
+        />
         <section class="slides-box">
           <div class="slide">
             <img src="./imgs/alan_happy.png" alt="meme-pic" />
@@ -27,145 +63,34 @@
           </div>
         </section>
         <section class="about-memes">
-          <p class="meme-descr">Hello, HTML! ...hello, world!</p>
+          <div class="txt">
+            <div class="txt-box">
+              <p class="meme-descr">Hello, HTML! ...hello, world!</p>
+              <p class="meme-descr">Hi, CSS! It's me! How are you doing?</p>
+              <p class="meme-descr">Nice to meet you, JS! I am so excited!</p>
+              <p class="meme-descr">Hi, sweety! I'll break u your brains!</p>
+              <p class="meme-descr">...to be continued</p>
+            </div>
+          </div>
           <div class="dots">
-            <div class="dot-wrapper dot-wrpr-1">
-              <div class="dot-shape active"></div>
-            </div>
-            <div class="dot-wrapper dot-wrpr-2">
-              <div class="dot-shape"></div>
-            </div>
-            <div class="dot-wrapper dot-wrpr-3">
-              <div class="dot-shape"></div>
-            </div>
-            <div class="dot-wrapper dot-wrpr-4">
-              <div class="dot-shape"></div>
-            </div>
-            <div class="dot-wrapper dot-wrpr-5">
-              <div class="dot-shape"></div>
-            </div>
+            <label for="dotBtn1" class="dot-wrapper dot-wrapper-1">
+              <div class="dot-shape dot-1"></div>
+            </label>
+            <label for="dotBtn2" class="dot-wrapper dot-wrapper-2">
+              <div class="dot-shape dot-2"></div>
+            </label>
+            <label for="dotBtn3" class="dot-wrapper dot-wrapper-3">
+              <div class="dot-shape dot-3"></div>
+            </label>
+            <label for="dotBtn4" class="dot-wrapper dot-wrapper-4">
+              <div class="dot-shape dot-4"></div>
+            </label>
+            <label for="dotBtn5" class="dot-wrapper dot-wrapper-5">
+              <div class="dot-shape dot-5"></div>
+            </label>
           </div>
         </section>
       </div>
     </main>
-    <script type="text/javascript">
-      const slidesBox = document.querySelector(".slides-box");
-      const slide = document.getElementsByClassName("slide");
-      const dotNav = document.getElementsByClassName("dot-shape");
-
-      const dotWrapper1 = document.querySelector(".dot-wrpr-1");
-      const dotWrapper2 = document.querySelector(".dot-wrpr-2");
-      const dotWrapper3 = document.querySelector(".dot-wrpr-3");
-      const dotWrapper4 = document.querySelector(".dot-wrpr-4");
-      const dotWrapper5 = document.querySelector(".dot-wrpr-5");
-
-      const memeDescr = document.querySelector(".meme-descr");
-
-      let index = 0;
-      let width;
-      function slideWith() {
-        width = slide[0].clientWidth;
-      }
-      slideWith();
-      window.addEventListener("resize", slideWith);
-      slidesBox.style.transform = "translateX(" + -width * index + "px)";
-
-      dotWrapper2.addEventListener("click", secDot);
-      function secDot() {
-        if (index >= slide.length - 1) {
-          return;
-        }
-        slidesBox.style.transition = "transform 0.4s ease-in-out";
-        index = 1;
-        slidesBox.style.transform = "translateX(" + -width * index + "px)";
-        dotsLabel();
-        memeDescr.innerHTML = "Hi, CSS! It's me! How are you doing?";
-      }
-      dotWrapper3.addEventListener("click", trdDot);
-      function trdDot() {
-        if (index >= slide.length - 1) {
-          return;
-        }
-        slidesBox.style.transition = "transform 0.4s ease-in-out";
-        index = 2;
-        slidesBox.style.transform = "translateX(" + -width * index + "px)";
-        dotsLabel();
-        memeDescr.innerHTML = "Nice to meet you, JS! I am so excited!";
-      }
-      dotWrapper4.addEventListener("click", frhDot);
-      function frhDot() {
-        if (index >= slide.length - 1) {
-          return;
-        }
-        slidesBox.style.transition = "transform 0.4s ease-in-out";
-        index = 3;
-        slidesBox.style.transform = "translateX(" + -width * index + "px)";
-        dotsLabel();
-        memeDescr.innerHTML = "Hi, sweety! I'll break u your brains!";
-      }
-      dotWrapper5.addEventListener("click", ffhDot);
-      function ffhDot() {
-        if (index >= slide.length - 1) {
-          return;
-        }
-        slidesBox.style.transition = "transform 0.4s ease-in-out";
-        index = 4;
-        slidesBox.style.transform = "translateX(" + -width * index + "px)";
-        dotsLabel();
-        memeDescr.innerHTML = "...to be continued";
-      }
-      //   ---
-      dotWrapper1.addEventListener("click", fstDot);
-      function fstDot() {
-        if (index <= 0) {
-          return;
-        }
-        slidesBox.style.transition = "transform 0.4s ease-in-out";
-        index = 0;
-        slidesBox.style.transform = "translateX(" + -width * index + "px)";
-        dotsLabel();
-        memeDescr.innerHTML = "Hello, HTML! ...hello, world!";
-      }
-      dotWrapper4.addEventListener("click", revFrhDot);
-      function revFrhDot() {
-        if (index <= 0) {
-          return;
-        }
-        slidesBox.style.transition = "transform 0.4s ease-in-out";
-        index = 3;
-        slidesBox.style.transform = "translateX(" + -width * index + "px)";
-        dotsLabel();
-        memeDescr.innerHTML = "Hi, sweety! I'll break u your brains!";
-      }
-      dotWrapper3.addEventListener("click", revTrdDot);
-      function revTrdDot() {
-        if (index <= 0) {
-          return;
-        }
-        slidesBox.style.transition = "transform 0.4s ease-in-out";
-        index = 2;
-        slidesBox.style.transform = "translateX(" + -width * index + "px)";
-        dotsLabel();
-        memeDescr.innerHTML = "Nice to meet you, JS! I am so excited!";
-      }
-      dotWrapper2.addEventListener("click", revSecDot);
-      function revSecDot() {
-        if (index <= 0) {
-          return;
-        }
-        slidesBox.style.transition = "transform 0.4s ease-in-out";
-        index = 1;
-        slidesBox.style.transform = "translateX(" + -width * index + "px)";
-        dotsLabel();
-        memeDescr.innerHTML = "Hi, CSS! It's me! How are you doing?";
-      }
-
-      function dotsLabel() {
-        for (i = 0; i < dotNav.length; i++) {
-          dotNav[i].className = dotNav[i].className.replace(" active", "");
-        }
-        dotNav[index].className += " active";
-      }
-    </script>
   </body>
 </html>

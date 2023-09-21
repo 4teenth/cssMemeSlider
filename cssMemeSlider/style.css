@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -33,61 +34,133 @@ main {
 .about-memes {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 1rem 0;
 }
+.txt {
+    width: 78%;
+    overflow: hidden;
+}
+.txt-box {
+    display: flex;
+}
 .meme-descr {
+    min-width: 129%;
     font-size: 1em;
+    font-family: 'Special Elite', cursive;
     color: #cbcbcb;
 }
 .dots {
     display: flex;
 }
 .dot-wrapper {
-    display: inline-block;
-    width: 1.7em;
-    height: 1.4em;
-    background-color: transparent;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    text-align: center;
+    padding: 0.5em;
+}
+.dot-btn {
+    display: none;
 }
 .dot-shape {
     display: inline-block;
-    width: 0.8em;
-    height: 0.8em;
+    width: 1em;
+    height: 1em;
     background-color: #71abfe;
     border-radius: 50%;
     transition: background-color 0.4s ease-in-out;
 }
-.dot-shape:hover {
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.4s ease-in-out;
-}
-.active {
-    border: 0.1em solid #71abfe;
-    border-radius: 50%;
-    background-color: transparent;
-    /* transition: background-color 0.4s ease-in-out; */
-    transition: border-color 0.4s ease-in-out;
-}
-.active:hover {
-    border: 0.1em solid #fff;
-    background-color: transparent;
-    transition: border-color 0.4s ease-in-out;
-}
-/* .dot:hover {
-    .dot-shape {
-        background-color: #fff;
-    }
-} */
-/* OR */
 .dot-wrapper:hover .dot-shape {
     background-color: #fff;
 }
-.dot-wrapper:hover .active {
+/* ### dots */
+#dotBtn1:checked~.about-memes .dot-1 {
+    border: 0.1em solid #71abfe;
     background-color: transparent;
-    border: 0.1em solid #fff;
+    transition: border-color 0.4s ease-in-out;
 }
+#dotBtn1:checked~.about-memes .dot-wrapper-1:hover .dot-1 {
+    border: 0.1em solid #fff;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+#dotBtn2:checked~.about-memes .dot-2 {
+    border: 0.1em solid #71abfe;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+#dotBtn2:checked~.about-memes .dot-wrapper-2:hover .dot-2 {
+    border: 0.1em solid #fff;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+#dotBtn3:checked~.about-memes .dot-3 {
+    border: 0.1em solid #71abfe;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+#dotBtn3:checked~.about-memes .dot-wrapper-3:hover .dot-3 {
+    border: 0.1em solid #fff;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+#dotBtn4:checked~.about-memes .dot-4 {
+    border: 0.1em solid #71abfe;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+#dotBtn4:checked~.about-memes .dot-wrapper-4:hover .dot-4 {
+    border: 0.1em solid #fff;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+#dotBtn5:checked~.about-memes .dot-5 {
+    border: 0.1em solid #71abfe;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+#dotBtn5:checked~.about-memes .dot-wrapper-5:hover .dot-5 {
+    border: 0.1em solid #fff;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+/* ### slides */
+.slide, .meme-descr {
+    transform: translateX(100%);
+    transition: 1s;
+}
+#dotBtn1:checked~.slides-box .slide {
+    transform: translateX(0%);
+}
+#dotBtn2:checked~.slides-box .slide {
+    transform: translateX(-100%);
+}
+#dotBtn3:checked~.slides-box .slide {
+    transform: translateX(-200%);
+}
+#dotBtn4:checked~.slides-box .slide {
+    transform: translateX(-300%);
+}
+#dotBtn5:checked~.slides-box .slide {
+    transform: translateX(-400%);
+}
+/* ### txt */
+#dotBtn1:checked~.about-memes .meme-descr {
+    transform: translateX(0%);
+}
+#dotBtn2:checked~.about-memes .meme-descr {
+    transform: translateX(-100%);
+}
+#dotBtn3:checked~.about-memes .meme-descr {
+    transform: translateX(-200%);
+}
+#dotBtn4:checked~.about-memes .meme-descr {
+    transform: translateX(-300%);
+}
+#dotBtn5:checked~.about-memes .meme-descr {
+    transform: translateX(-400%);
+}
+
 @media (max-width: 1440px) {
     .wrapper {
         width: 90%;
