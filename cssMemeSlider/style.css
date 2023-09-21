@@ -173,7 +173,10 @@ main {
     .about-memes {
         flex-direction: column;
     }
-    .meme-descr {
+    .txt {
+        width: 100%;
+        margin-top: 1.1rem;
+        margin-right: auto;
         order: 2;
     }
     .dots {
