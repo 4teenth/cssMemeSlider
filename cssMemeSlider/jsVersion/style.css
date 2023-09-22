@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #6c7983;
+}
+.wrapper {
+    width: 50%;
+    height: auto;
+    background-color: #25282a;
+    border-radius: 0.3em;
+    border: 1.5em solid #25282a;
+    box-shadow: 0 0 0.3em 0.3em rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.slides-box {
+    display: flex;
+}
+.slide {
+    min-width: 100%;
+}
+.slide > img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.3em;
+    object-fit: cover;
+}
+.about-memes {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+.meme-descr {
+    font-size: 1em;
+    color: #cbcbcb;
+}
+.dots {
+    display: flex;
+}
+.dot-wrapper {
+    display: inline-block;
+    width: 1.7em;
+    height: 1.4em;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 0.2em;
+}
+.dot-shape {
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: #71abfe;
+    border-radius: 50%;
+    transition: background-color 0.4s ease-in-out;
+}
+.dot-shape:hover {
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+}
+.active {
+    border: 0.1em solid #71abfe;
+    border-radius: 50%;
+    background-color: transparent;
+    /* transition: background-color 0.4s ease-in-out; */
+    transition: border-color 0.4s ease-in-out;
+}
+.active:hover {
+    border: 0.1em solid #fff;
+    background-color: transparent;
+    transition: border-color 0.4s ease-in-out;
+}
+/* .dot:hover {
+    .dot-shape {
+        background-color: #fff;
+    }
+} */
+/* OR */
+.dot-wrapper:hover .dot-shape {
+    background-color: #fff;
+}
+.dot-wrapper:hover .active {
+    background-color: transparent;
+    border: 0.1em solid #fff;
+}
+@media (max-width: 1440px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+@media (max-width: 640px) {
+    .wrapper {
+        width: 90%;
+    }
+    .about-memes {
+        flex-direction: column;
+    }
+    .meme-descr {
+        order: 2;
+    }
+    .dots {
+        order: 1;
+        align-self: center;
+    }
+}
